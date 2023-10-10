@@ -9,16 +9,25 @@
 <h1>Weekend Server Calculator</h1>
 <div>
     <h2>add equations</h2>
+    
     <form onSubmit="sendEquationsToServer(event)">
         Numbers: <input id="number-input" type="text" required placeholder="Numbers"/>
     <br/>
-        <button id="addition-btn">+</button> <button id="subtract-btn">-</button> <button id="multiply-btn">*</button> <button id="division-btn">/</button>
+    <class id="btns">
+        <input type="button"  onClick="divideBy()" value="/" />
+        <input type="button"  onClick="multiplyBy()" value="*" />
+        <input type="button"  onClick="addedBy()" value="+" />
+        <input type="button"  onClick="subtractedBy()" value="-" />
+    </class>
     <br/>
         Numbers: <input id="number-input2" type="text" required placeholder="Numbers"/>
-        <button>=</button> <button>C</button>
-
+        <button>=</button> <input type="button" onClick="clearInput()" value="C">
+       
     </form>
-</div>
+    <p>result is: <br>
+        <span id = "result"></span>
+</p>
+
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="client.js"></script>
 </body>
